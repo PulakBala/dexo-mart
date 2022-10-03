@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
+import { adToDb } from '../Utilities/adToDb';
 import './Shop.css'
 
 const Shop = () => {
@@ -16,6 +17,7 @@ const Shop = () => {
         // console.log(products);
         const newCart = [...cart, products]
         setCart(newCart);
+        adToDb(products.id)
     }
     return (
         <div className='shop-container'>
