@@ -22,6 +22,15 @@ const adToDb =(id) =>{
  
     
 }
+const getStoreCart = () =>{
+    let shoppingCart = {};
+    //get theh shopping cart
+    const storedCart = localStorage.getItem('shoppingCart');
+    if(storedCart) {
+        shoppingCart = JSON.parse(storedCart)
+    } 
+    return shoppingCart;
+}
 const removeFromDb = id =>{
     console.log('inside fake db', id)
     const storedCart = localStorage.getItem('shoppingCart');
@@ -33,4 +42,7 @@ const removeFromDb = id =>{
         }
     }
 }
-export {adToDb, removeFromDb};
+const deleteShooppingCart = () =>{
+    localStorage.removeItem('shoppingCart');
+}
+export {adToDb, removeFromDb,deleteShooppingCart, getStoreCart};
