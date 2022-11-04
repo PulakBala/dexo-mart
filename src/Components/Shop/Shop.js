@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
-import { adToDb, getStoreCart } from '../Utilities/adToDb';
+import { adToDb, deleteShooppingCart, getStoreCart } from '../Utilities/adToDb';
 import './Shop.css'
 
 const Shop = () => {
    const products = useLoaderData(); 
     const [cart, setCart] = useState([]);
+
+    const clearCart = ()=> {
+        setCart([]);
+        deleteShooppingCart();
+    }
 
     useEffect(() =>{
         const storedCart = getStoreCart();
@@ -48,7 +53,11 @@ const Shop = () => {
                 }
           </div>
           <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart clearCart={clearCart} cart={cart}>
+                    <Link to="/orders">
+                        <button>Review Order</button>
+                    </Link>
+                </Cart>
           </div>
         </div>
     );
