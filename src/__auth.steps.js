@@ -5,4 +5,12 @@
 4.install firebase
 5.get firebase config in your firebase.config.js file 
 6.export app from firebase.config.js
+
+-------------
+authenication
+1. Create UserContext (auth Context) : Usercontext --> component name , userContext provides AuthContext
+
+2. Create Authcontext
+3.set AuthContext.Provider
+4.Make sure you set the children
 */
