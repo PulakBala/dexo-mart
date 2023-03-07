@@ -9,7 +9,7 @@ import logo from "../../images/Logo.svg";
 const Header = () => {
   const { user, logOut } = UserContext(AuthContext);
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
       <Container>
         <img src={logo} alt="" />
         <Navbar.Brand href="#home"></Navbar.Brand>

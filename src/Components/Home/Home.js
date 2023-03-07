@@ -11,14 +11,14 @@ import './Home.css'
 const Home = () => {
   return (
     
-   <div>
+   <div className="bg">
      <Carousel indicators={false}>
       <Carousel.Item className="mt-5">
         <img
           className="d-block m-auto"
           src={image1}
           alt="First slide"
-          style={{width:'380px', height:'500px'}}
+          style={{width:'480px', height:'550px'}}
         />
         {/* <Carousel.Caption className="text-danger">
           <h3>First slide label</h3>
@@ -31,7 +31,7 @@ const Home = () => {
           className="d-block m-auto mb-5"
           src={image2}
           alt="Second slide"
-          style={{width:'550px', height:'700px'}}
+          style={{width:'550px', height:'550px'}}
         />
 
         {/* <Carousel.Caption className="text-danger">
@@ -45,15 +45,16 @@ const Home = () => {
           className="d-block m-auto"
           src={image3}
           alt="Third slide"
-          style={{width:'380px', height:'450px'}}
+          style={{width:'380px', height:'550px'}}
 
         />
       </Carousel.Item>
     </Carousel>
 
 
-    <div className="bg-danger">
-
+    <div>
+        <h1 className="text-center mt-5 ">Welcome to Ema-John!!</h1>
+        <p className=" fs-5 m-auto" style={{width:'650px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, necessitatibus quos expedita, deleniti eveniet labore assumenda exercitationem officia eius culpa pariatur repellat nihil est quo maiores laudantium voluptas consequuntur fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, iure.</p>
     </div>
     <div class="container text-center my-5">
                 <div class="row g-4 catagoris">
