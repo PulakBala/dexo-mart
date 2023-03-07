@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+
+.react-bootstrap a {
+  text-decoration: none;
+}
