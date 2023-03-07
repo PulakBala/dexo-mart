@@ -17,7 +17,8 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav className="gap-4 fs-5 text-center">
-            <Link className="text-white" style={{ textDecoration: "none" }} to="/">Shop</Link>
+          <Link className="text-white" style={{ textDecoration: "none" }} to="/">Home</Link>
+            <Link className="text-white" style={{ textDecoration: "none" }} to="/shop">Shop</Link>
             <Link className="text-white" style={{ textDecoration: "none" }} to="/orders">Orders</Link>
             <Link className="text-white" style={{ textDecoration: "none" }} to="/inventory">Inventory</Link>
             <Link className="text-white" style={{ textDecoration: "none" }} to="/about">About</Link>

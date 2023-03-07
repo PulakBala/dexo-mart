@@ -1,0 +1,9 @@
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: black; /* Remove the default icon */
+}
+.carousel-control-next{
+    color: red;
+}
+

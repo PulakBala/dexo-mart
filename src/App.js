@@ -10,6 +10,7 @@ import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 import Shipping from './Components/Shipping/Shipping';
 import PrivateRoute from './routes/PrivateRoute';
+import Home from './Components/Home/Home';
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ const App = () => {
       children: [
         {
           path: '/',
+          element: <Home></Home>
+        },
+        {
+          path: '/shop',
           loader: () => fetch('products.json'),
           element: <Shop></Shop>
         },
