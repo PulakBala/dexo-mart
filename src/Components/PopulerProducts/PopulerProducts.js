@@ -2,7 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import './PopulerProducts.css'
 const PopulerProducts = (props) => {
-  console.log(props.populer);
+  
   const {thumbnailUrl } = props.populer;
   return (
     <div>

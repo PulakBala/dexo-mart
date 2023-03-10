@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import image1 from "../../images/tv-removebg-preview.png";
 import image2 from "../../images/xbox.png";
@@ -6,15 +6,26 @@ import image3 from "../../images/headphone.png";
 import watch from "../../images/watch.png";
 import shoes from "../../images/shoes.png";
 import bag from "../../images/bag.png";
+import save from "../../images/save.jpeg";
 import fashionShoe from "../../images/fashion-shoe.webp";
 import { Container, Row, Col } from "react-bootstrap";
 
 import "./Home.css";
 import { Link, useLoaderData } from "react-router-dom";
 import PopulerProducts from "../PopulerProducts/PopulerProducts";
+import Commnet from "../Comment/Commnet";
 
 const Home = () => {
   const populerProduct = useLoaderData();
+
+  const [comments, setComments] = useState(["this is the first comment"]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const newComment = event.target.elements.comment.value;
+    setComments([...comments, newComment]);
+    event.target.reset();
+  };
 
   return (
     <div className="bg">
@@ -58,7 +69,7 @@ const Home = () => {
 
       <div>
         <h1 className="text-center mt-5 ">Welcome to Ema-John!!</h1>
-        <p className=" fs-5 m-auto" style={{ width: "650px" }}>
+        <p className=" fs-5 m-auto  py-5 mb-5" style={{ width: "750px" }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
           necessitatibus quos expedita, deleniti eveniet labore assumenda
           exercitationem officia eius culpa pariatur repellat nihil est quo
@@ -95,7 +106,7 @@ const Home = () => {
         <div class="card mt-5">
           <div class="row g-0">
             <div class="col-md-6">
-              <img style={{ width: "557px" }} src={fashionShoe} alt="..." />
+              <img style={{ width: "557px" }} src={save} alt="..." />
             </div>
             <div class="col-md-6 bg">
               <div class="card-body">
@@ -143,7 +154,7 @@ const Home = () => {
                   laboriosam neque labore iure animi, assumenda pariatur magnam
                   ipsum eveniet! Voluptatum magnam fuga esse, impedit magni amet
                   quis perferendis dolor, eius similique facere praesentium,
-                  doloremque assumenda aspernatur.
+                  doloremque assumenda asper?
                 </p>
                 <p class="card-text">
                   <small class="text-muted">Last updated 16 mins ago</small>
@@ -151,7 +162,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-6">
-              <img style={{ width: "557px" }} src={fashionShoe} alt="..." />
+              <img
+                style={{ width: "557px", height: "554px" }}
+                src={fashionShoe}
+                alt="..."
+              />
             </div>
           </div>
         </div>
@@ -165,46 +180,61 @@ const Home = () => {
             ></PopulerProducts>
           ))}
         </div>
-
-        
       </div>
+
+      <div className="comment-section">
+        <h2>Comments</h2>
+        <div className="comments">
+          {comments.map((comment, index) => (
+            <Commnet key={index} comment={comment}></Commnet>
+          ))}
+        </div>
+
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="comment">Leave a comment:</label>
+          <input type="text" id="comment" name="comment" required />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      {/* footer section  */}
       <footer className="mt-5 bg-black text-white text-center">
-          <Container className="py-5">
-            <Row>
-              <Col md={4}>
-                <h5>About Us</h5>
-                <p>
-                  We are a team of developers building amazing web applications.
-                </p>
-              </Col>
-              <Col md={4}>
-                <h5>Contact Us</h5>
-                <p>
-                  Email: info@example.com
-                  <br />
-                  Phone: (555) 555-5555
-                </p>
-              </Col>
-              <Col md={4}>
-                <h5>Follow Us</h5>
-                <p>Stay connected on social media:</p>
-                <ul className="list-inline">
-                  <li className="list-inline-item">
-                    <Link>Facebook</Link>
-                  </li>
-                  <li className="list-inline-item">
-                    <Link>Twitter</Link>
-                  </li>
-                  <li className="list-inline-item">
-                    <Link>Instagram</Link>
-                  </li>
-                </ul>
-              </Col>
-            </Row>
-            <hr />
-            <p className="text-center">&copy; 2023 My Awesome App</p>
-          </Container>
-        </footer>
+        <Container className="py-5">
+          <Row>
+            <Col md={4}>
+              <h5>About Us</h5>
+              <p>
+                We are a team of developers building amazing web applications.
+              </p>
+            </Col>
+            <Col md={4}>
+              <h5>Contact Us</h5>
+              <p>
+                Email: info@example.com
+                <br />
+                Phone: (555) 555-5555
+              </p>
+            </Col>
+            <Col md={4}>
+              <h5>Follow Us</h5>
+              <p>Stay connected on social media:</p>
+              <ul className="list-inline">
+                <li className="list-inline-item">
+                  <Link>Facebook</Link>
+                </li>
+                <li className="list-inline-item">
+                  <Link>Twitter</Link>
+                </li>
+                <li className="list-inline-item">
+                  <Link>Instagram</Link>
+                </li>
+              </ul>
+            </Col>
+          </Row>
+          <hr />
+          <p className="text-center">&copy; 2023 My Awesome App</p>
+        </Container>
+      </footer>
     </div>
   );
 };
