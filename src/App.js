@@ -19,6 +19,7 @@ const App = () => {
       children: [
         {
           path: '/',
+          loader:() => fetch('populer.json'),
           element: <Home></Home>
         },
         {
