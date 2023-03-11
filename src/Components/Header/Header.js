@@ -1,13 +1,17 @@
 import React from "react";
+import { useContext } from "react";
+import { Image } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
-import UserContext, { AuthContext } from "../../context/UserContext";
+import  { AuthContext } from "../../context/UserContext";
 import logo from "../../images/Logo.svg";
+import { FaBeer} from 'react-icons/fa';
 
 const Header = () => {
-  const { user, logOut } = UserContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user)
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
       <Container>
@@ -34,6 +38,16 @@ const Header = () => {
                 <Link className="text-white" style={{ textDecoration: "none" }} to="/signup">SignUp</Link>
               </>
             )}
+            {
+              user?.photoURL ?
+              <>
+              <Image src={user.photoURL} roundedCircle style={{height:'40px'}}/>
+              </>
+              :
+              <>
+               <FaBeer/>
+              </>
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>
