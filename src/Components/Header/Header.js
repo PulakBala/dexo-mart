@@ -7,7 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import  { AuthContext } from "../../context/UserContext";
 import logo from "../../images/Logo.svg";
-import { FaBeer} from 'react-icons/fa';
+import { FaBeer } from 'react-icons/fa';
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);

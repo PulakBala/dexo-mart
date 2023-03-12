@@ -1,13 +1,28 @@
+import { GoogleAuthProvider } from "firebase/auth";
 import React from "react";
 import { useContext } from "react";
 import { useState } from "react";
+import { Button } from "react-bootstrap";
+import { FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/UserContext";
 import "./SignUp.css";
 const SignUp = () => {
   const [error, setError] = useState(null);
-  const { createUser, userUpdateProfile } = useContext(AuthContext);
+  const { createUser, userUpdateProfile,loginProvider } = useContext(AuthContext);
   const nevigate = useNavigate();
+
+  const provider = new GoogleAuthProvider();
+
+ const handleGoogleSignIn =()=>{
+  loginProvider(provider)
+  .then(result =>{
+    const user = result.user;
+    console.log(user);
+  })
+  .catch(error => console.error(error))
+ }
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -61,7 +76,7 @@ const SignUp = () => {
 
         <div className="form-control">
           <label htmlFor="email">PhotoURL</label>
-          <input type="PhotoURL" name="photoURL"  />
+          <input type="PhotoURL" name="photoURL" required />
         </div>
 
         <div className="form-control">
@@ -77,6 +92,10 @@ const SignUp = () => {
         <div className="form-control">
           <label htmlFor="confirm">Confirm Password</label>
           <input type="password" name="confirm" required />
+        </div>
+
+        <div className="text-center">
+          <Button onClick={handleGoogleSignIn}> <FaGoogle className="me-3 mb-1 fs-2"/> Google</Button>
         </div>
 
         <input className="btn-submit" type="submit" value="Sign Up" />

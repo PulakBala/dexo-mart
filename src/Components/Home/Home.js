@@ -18,7 +18,7 @@ import Commnet from "../Comment/Commnet";
 const Home = () => {
   const populerProduct = useLoaderData();
 
-  const [comments, setComments] = useState(["this is the first comment"]);
+  const [comments, setComments] = useState([""]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -182,7 +182,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="comment-section">
+      <div className="comment-section text-center  mt-5 py-5">
         <h2>Comments</h2>
         <div className="comments">
           {comments.map((comment, index) => (
@@ -191,9 +191,9 @@ const Home = () => {
         </div>
 
         <form onSubmit={handleSubmit}>
-          <label htmlFor="comment">Leave a comment:</label>
-          <input type="text" id="comment" name="comment" required />
-          <button type="submit">Submit</button>
+          {/* <label htmlFor="comment">Leave a comment:</label> */}
+          <input className="my-4 p-5" placeholder="write your comments.." type="text" id="comment" name="comment" required /> <br/>
+          <button type="submit" className="btn btn-dark">Submit</button>
         </form>
       </div>
 
