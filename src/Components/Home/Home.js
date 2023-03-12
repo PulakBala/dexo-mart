@@ -68,7 +68,7 @@ const Home = () => {
       </Carousel>
 
       <div>
-        <h1 className="text-center mt-5 ">Welcome to Ema-John!!</h1>
+        <h1 className="text-center mt-5 ">Welcome to<marquee> Ema-John!!</marquee></h1>
         <p className=" fs-5 m-auto  py-5 mb-5" style={{ width: "750px" }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
           necessitatibus quos expedita, deleniti eveniet labore assumenda
