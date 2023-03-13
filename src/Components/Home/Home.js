@@ -68,8 +68,10 @@ const Home = () => {
       </Carousel>
 
       <div>
-        <h1 className="text-center mt-5 ">Welcome to<marquee> Ema-John!!</marquee></h1>
-        <p className=" fs-5 m-auto  py-5 mb-5" style={{ width: "750px" }}>
+        <h1 className="text-center mt-5 ">
+          Welcome to<marquee> Ema-John!!</marquee>
+        </h1>
+        <p className="text fs-5 m-auto  py-5 mb-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
           necessitatibus quos expedita, deleniti eveniet labore assumenda
           exercitationem officia eius culpa pariatur repellat nihil est quo
@@ -106,7 +108,7 @@ const Home = () => {
         <div class="card mt-5">
           <div class="row g-0">
             <div class="col-md-6">
-              <img style={{ width: "557px" }} src={save} alt="..." />
+              <img className="big1-img" src={save} alt="..." />
             </div>
             <div class="col-md-6 bg">
               <div class="card-body">
@@ -163,7 +165,7 @@ const Home = () => {
             </div>
             <div class="col-md-6">
               <img
-                style={{ width: "557px", height: "554px" }}
+                className="big1-img"
                 src={fashionShoe}
                 alt="..."
               />
@@ -182,6 +184,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* comment section  */}
       <div className="comment-section text-center  mt-5 py-5">
         <h2>Comments</h2>
         <div className="comments">
@@ -192,8 +195,18 @@ const Home = () => {
 
         <form onSubmit={handleSubmit}>
           {/* <label htmlFor="comment">Leave a comment:</label> */}
-          <input className="my-4 p-5" placeholder="write your comments.." type="text" id="comment" name="comment" required /> <br/>
-          <button type="submit" className="btn btn-dark">Submit</button>
+          <input
+            className="comment my-4 py-5"
+            placeholder="write your comments.."
+            type="text"
+            id="comment"
+            name="comment"
+            required
+          />{" "}
+          <br />
+          <button type="submit" className="btn btn-dark">
+            Submit
+          </button>
         </form>
       </div>
 

@@ -7,7 +7,7 @@ const PopulerProducts = (props) => {
   return (
     <div>
       <Card  style={{ width: "16rem" }}>
-        <Card.Img variant="top" src={thumbnailUrl} />
+        <Card.Img className="" variant="top" src={thumbnailUrl} />
         {/* <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>

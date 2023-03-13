@@ -4,3 +4,10 @@
     position: sticky;
     top: 0;
 }
+
+@media screen and (max-width:480px) {
+    
+    .cart-container{
+        width: 315px;
+    }
+}

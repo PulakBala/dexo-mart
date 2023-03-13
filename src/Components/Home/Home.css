@@ -6,7 +6,34 @@
 .carousel-control-next{
     color: red;
 }
+.text{
+  width: 750px;
+  color: red;
+}
+.big1-img{
+  width: 560px;
+  height: 555px;
+}
 
 .bg{
     background-color: antiquewhite;
+}
+.comment{
+  padding: 20px;
+}
+
+@media only screen and (max-width:480px) {
+  .text {
+    font-size: 10px;
+    width: 300px;
+    grid-template-columns:1fr;
+    justify-items: center;
+  }
+  .big1-img{
+    width: 295px;
+  }
+  .comment input{
+    padding: 20px;
+  }
+  
 }

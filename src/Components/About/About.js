@@ -4,6 +4,7 @@ import flip from "../../images/flip.avif";
 import boyes from "../../images/boyes.avif"
 import { CardGroup, Card } from "react-bootstrap";
 import { FcCallback } from 'react-icons/fc';
+import BangladeshiMap from "../BangladeshiMap/BangladeshiMap";
 const About = () => {
   return (
     <section className="bg-light py-5">
@@ -95,6 +96,10 @@ const About = () => {
         </Row>
       </Container>
 
+
+      <div className="" style={{height:'400px'}}>
+        <BangladeshiMap></BangladeshiMap>
+      </div>
     </section>
   );
 };
