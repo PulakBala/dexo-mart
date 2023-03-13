@@ -1,7 +1,9 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import flip from "../../images/flip.avif";
+import boyes from "../../images/boyes.avif"
 import { CardGroup, Card } from "react-bootstrap";
+import { FcCallback } from 'react-icons/fc';
 const About = () => {
   return (
     <section className="bg-light py-5">
@@ -22,7 +24,7 @@ const About = () => {
               </p>
             </div>
           </Col>
-          <Col className="  rounded-circle" md={6}>
+          <Col className="rounded-circle" md={6}>
             <marquee>
               <img
                 src={flip}
@@ -66,6 +68,33 @@ const About = () => {
           </Card.Body>
         </Card>
       </CardGroup>
+
+
+
+      <Container className="mt-5 py-4">
+        <Row  style={{height:'400px'}}>
+
+        <Col className="" md={4}  >
+            
+             <Image  src={boyes}
+              alt="company about"
+              className="img-fluid shadow rounded"
+              style={{height:'400px'}}></Image>
+            
+          
+        </Col>
+          <Col className="bg shadow rounded" md={8}>
+            <div>
+              <h2 className="py-3 text-center text-secondary mt-4 rounded-circle">
+                We realize that you lead a busy life, so we have made it easy for you to drop off your vehicle 24/7.
+              </h2>
+              <h1 className="text-center mt-5"><FcCallback className="me-4 mb-1"/>01843882834</h1>
+            </div>
+          </Col>
+         
+        </Row>
+      </Container>
+
     </section>
   );
 };
