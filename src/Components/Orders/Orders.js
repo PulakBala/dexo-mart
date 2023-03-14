@@ -5,6 +5,7 @@ import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import { removeFromDb, deleteShooppingCart} from '../Utilities/adToDb';
 import { Link } from "react-router-dom";
+import './ Order.css'
 
 const Orders = () => {
     const {initialCart} = useLoaderData();

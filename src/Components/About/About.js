@@ -97,9 +97,9 @@ const About = () => {
       </Container>
 
 
-      <div className="" style={{height:'400px'}}>
+      {/* <div className="" style={{height:'400px'}}>
         <BangladeshiMap></BangladeshiMap>
-      </div>
+      </div> */}
     </section>
   );
 };
