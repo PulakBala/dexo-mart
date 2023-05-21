@@ -97,6 +97,7 @@ useEffect(() =>{
   return (
     <div>
       <div className="shop-container">
+        {/* product container ----------------------- */}
         <div className="products-container">
           {pageData.map((product) => (
             <Product
@@ -107,6 +108,9 @@ useEffect(() =>{
           ))}
 
         </div>
+
+            {/* Cart to add section -------------------------- */}
+
         <div className="cart-container">
           <Cart clearCart={clearCart} cart={cart}>
             <Link to="/orders">
@@ -116,6 +120,7 @@ useEffect(() =>{
         </div>
       </div>
 
+            {/* pagination ------------------------- */}
 
       <div className="d-flex justify-content-center">
             <nav>

@@ -17,6 +17,7 @@ import Commnet from "../Comment/Commnet";
 import useTitle from "../../hook/useTitle";
 import Footer from "../Footer/Footer";
 
+
 const Home = () => {
   const populerProduct = useLoaderData();
   useTitle('Home')
@@ -177,7 +178,10 @@ const Home = () => {
         </div>
 
         {/* populer collection */}
-        <div className="grd">
+
+        {/* <Gallery/> */}
+        
+        <div className="gallery mt-5">
           {populerProduct.map((populer) => (
             <PopulerProducts
               populer={populer}
