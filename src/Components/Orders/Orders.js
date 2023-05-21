@@ -6,9 +6,12 @@ import ReviewItem from '../ReviewItem/ReviewItem';
 import { removeFromDb, deleteShooppingCart} from '../Utilities/adToDb';
 import { Link } from "react-router-dom";
 import './ Order.css'
+import useTitle from '../../hook/useTitle';
+import Footer from '../Footer/Footer';
 
 const Orders = () => {
     const {initialCart} = useLoaderData();
+    useTitle('Orders');
     const [cart, setCart] = useState(initialCart);
 
     const handleRemoveItem = (id) =>{
@@ -23,8 +26,9 @@ const Orders = () => {
     }
 
     return (
-        <div className='shop-container'>
-            <div className="orders-container">
+        <div >
+           <div className='shop-container'>
+           <div className="orders-container">
                 {
                     cart.map(product => <ReviewItem
                         key={product.id}
@@ -33,16 +37,23 @@ const Orders = () => {
                     ></ReviewItem>)
                 }
                 {
-                    cart.length === 0 && <h2>No Items for Review. Please <Link to="/">Shop More</Link> </h2>
+                    cart.length === 0 && <h2 className='d-flex align-items-center justify-content-center pt-5 mt-5'>No Items for Review. Please.. <Link to="/shop">  Shop More</Link> </h2>
                 }
             </div>
             <div className="cart-container">
                 <Cart clearCart={clearCart} cart={cart}>
-                    <Link to='/shipping'>
-                        <button>Proceed Shipping</button>
-                    </Link>
+
+                      <button>
+                        
+                      <a href='https://buy.stripe.com/test_fZeaGa8rn6421VK7ss'>Pyament</a>
+
+                      </button>
+                 
                 </Cart>
             </div>
+           </div>
+
+            <Footer/>
         </div>
     );
 };

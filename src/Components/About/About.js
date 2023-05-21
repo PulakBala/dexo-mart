@@ -4,10 +4,12 @@ import flip from "../../images/flip.avif";
 import boyes from "../../images/boyes.avif"
 import { CardGroup, Card } from "react-bootstrap";
 import { FcCallback } from 'react-icons/fc';
-import BangladeshiMap from "../BangladeshiMap/BangladeshiMap";
+import useTitle from "../../hook/useTitle";
+import Footer from "../Footer/Footer";
 const About = () => {
+  useTitle('About');
   return (
-    <section className="bg-light py-5">
+    <section className="bg-light pt-5">
       <Container>
         <Row>
           <Col className="bg shadow rounded" md={6}>
@@ -72,7 +74,7 @@ const About = () => {
 
 
 
-      <Container className="mt-5 py-4">
+      <Container className="mt-5 ">
         <Row  style={{height:'400px'}}>
 
         <Col className="" md={4}  >
@@ -81,8 +83,7 @@ const About = () => {
               alt="company about"
               className="img-fluid shadow rounded"
               style={{height:'400px'}}></Image>
-            
-          
+
         </Col>
           <Col className="bg shadow rounded" md={8}>
             <div>
@@ -94,12 +95,11 @@ const About = () => {
           </Col>
          
         </Row>
+
       </Container>
 
+      <Footer/>
 
-      {/* <div className="" style={{height:'400px'}}>
-        <BangladeshiMap></BangladeshiMap>
-      </div> */}
     </section>
   );
 };

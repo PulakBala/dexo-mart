@@ -6,23 +6,26 @@ import { Button } from "react-bootstrap";
 import { FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/UserContext";
+import useTitle from "../../hook/useTitle";
+import Footer from '../Footer/Footer';
 import "./SignUp.css";
 const SignUp = () => {
   const [error, setError] = useState(null);
-  const { createUser, userUpdateProfile,loginProvider } = useContext(AuthContext);
+  const { createUser, userUpdateProfile, loginProvider } =
+    useContext(AuthContext);
   const nevigate = useNavigate();
+  useTitle("SignUp");
 
   const provider = new GoogleAuthProvider();
 
- const handleGoogleSignIn =()=>{
-  loginProvider(provider)
-  .then(result =>{
-    const user = result.user;
-    console.log(user);
-  })
-  .catch(error => console.error(error))
- }
-  
+  const handleGoogleSignIn = () => {
+    loginProvider(provider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,7 +35,7 @@ const SignUp = () => {
     const email = form.email.value;
     const password = form.password.value;
     const confirm = form.confirm.value;
-    console.log(name, photoURL, email, password,confirm)
+    console.log(name, photoURL, email, password, confirm);
     if (password.length < 6) {
       setError("Password should be 6 characters or more");
       return;
@@ -47,64 +50,99 @@ const SignUp = () => {
         const user = result.user;
         console.log(user);
         form.reset();
-        handleUserUpdateProfile(name, photoURL)
-        nevigate('/')
+        handleUserUpdateProfile(name, photoURL);
+        nevigate("/");
       })
       .catch((error) => console.error(error));
   };
 
-  const handleUserUpdateProfile =(name, photoURL)=>{
-   const  profile = {
-        displayName : name,
-        photoURL : photoURL
-    }
+  const handleUserUpdateProfile = (name, photoURL) => {
+    const profile = {
+      displayName: name,
+      photoURL: photoURL,
+    };
     userUpdateProfile(profile)
-    .then(() => {})
-    .catch(error => console.error(error));
-  }
-
+      .then(() => {})
+      .catch((error) => console.error(error));
+  };
 
   return (
-    <div className="form-container" >
-      <h2 className="form-title">Sign Up</h2>
+   <div>
+     <div className="form-container bg-dark text-white">
+      <h2 className="form-title text-light">Sign Up</h2>
 
-      <form onSubmit={handleSubmit} >
-        <div className="form-control">
-          <label htmlFor="email">Name</label>
-          <input type="name" name="name" required />
-        </div>
+      <form onSubmit={handleSubmit}>
+        <label>
+        <Button
+          className="googleLogin"
+          variant="outline-secondary"
+          // style={{ width: "412px"}}
+          onClick={handleGoogleSignIn}
+        >
+          
+          <FaGoogle className="me-3 mb-1 fs-2" /> Google
+        </Button>
+        
 
-        <div className="form-control">
-          <label htmlFor="email">PhotoURL</label>
-          <input type="PhotoURL" name="photoURL" required />
-        </div>
+        </label>
+        <br/>
 
-        <div className="form-control">
-          <label htmlFor="email">Email</label>
-          <input type="email" name="email" required />
-        </div>
+          <label htmlFor="name">
+          Name : 
+          <br/>
+          <input type="name" name="name"  required />
+          </label>
+         
+        <br/>
 
-        <div className="form-control">
-          <label htmlFor="password">Password</label>
-          <input type="password" name="password" required />
-        </div>
+        
+          <label htmlFor="photoURL">
+            PhotoURL :
+            <br/>
+            <input type="photoURL" name="photoURL" required/>
 
-        <div className="form-control">
-          <label htmlFor="confirm">Confirm Password</label>
+            </label>
+        <br/>
+
+        
+          <label htmlFor="email">
+            Email :
+            <br/>
+            <input type="email" name="email" required />
+
+            </label>
+
+            <br/>
+        
+
+     
+          <label htmlFor="password">
+            Password : 
+            <br/>
+            <input type="password" name="password" required />
+
+            </label>
+        
+
+        
+          <label htmlFor="confirm"> 
+          Confirm Password :
+          <br/>
           <input type="password" name="confirm" required />
-        </div>
 
-        <div className="text-center">
-          <Button onClick={handleGoogleSignIn}> <FaGoogle className="me-3 mb-1 fs-2"/> Google</Button>
-        </div>
+          </label>
+        
 
-        <input className="btn-submit" type="submit" value="Sign Up" />
+        <input className="btn-submit" type="submit" value="Sign Up"/>
       </form>
-      <p>
-        Already have an Account <Link to="/login">Login</Link>
+      <br/>
+      <p className="text-dark">
+        Already have an Account ... <Link to="/login">Login</Link>
       </p>
       <p className="text-error">{error}</p>
     </div>
+    <Footer/>
+   </div>
   );
 };
 

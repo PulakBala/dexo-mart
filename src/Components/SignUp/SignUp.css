@@ -1,3 +1,17 @@
 .text-error{
     color: rgb(246, 34, 34);
 }
+input{
+    padding: 12px 80px;
+    
+}
+.googleLogin {
+    width: 412px;
+}
+
+@media (max-width: 480px) {
+    /* Adjust the width for screens smaller than 480px */
+    .googleLogin {
+      width: 300px;
+    }
+  }
