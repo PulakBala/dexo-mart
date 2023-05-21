@@ -1,8 +1,12 @@
 .cart-info{
     /* position: sticky; */
+    background-color: black;
     padding: 20px;
     position: sticky;
     top: 0;
+    opacity: 02;
+    color: white;
+    height: 340px;
 }
 
 @media screen and (max-width:480px) {
