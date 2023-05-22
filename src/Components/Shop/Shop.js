@@ -81,7 +81,7 @@ useEffect(() =>{
 },[page])
 
   useEffect(() =>{
-    const pagedataCount = Math.ceil(data.length/16);
+    const pagedataCount = Math.ceil(data.length/7);
     console.log(pagedataCount)
     setPageCount(pagedataCount);
 
