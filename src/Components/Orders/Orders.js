@@ -45,7 +45,7 @@ const Orders = () => {
 
                       <button>
                         
-                      <a href='https://buy.stripe.com/test_fZeaGa8rn6421VK7ss'>Pyament</a>
+                      <a href='https://buy.stripe.com/test_fZeaGa8rn6421VK7ss'>Proceed</a>
 
                       </button>
                  

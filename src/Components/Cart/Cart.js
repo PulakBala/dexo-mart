@@ -17,10 +17,10 @@ const Cart = ({cart,clearCart,children}) => {
         <div className='cart-info'>
            <h4>Order Summery</h4>  
            <p>Selected Items : {quantity}</p>
-           <p>Total Price :${total}</p>
-           <p>Total Shipping : ${shipping}</p>
+           <p>Total Price :$ {total}</p>
+           <p>Total Shipping : $ {shipping}</p>
            <p>Tax : {tax}</p>
-           <p><strong>Grand Total : ${grandTotal.toFixed(2)}</strong></p>
+           <p><strong>Grand Total : $ {grandTotal.toFixed(2)}</strong></p>
            {/* <button onClick={clearCart}>Clear Cart</button> */}
            {children}
         </div>
