@@ -22,4 +22,16 @@
 .btn-logout{
     margin-left: 10px;
 } */
+.Navbar{
+    background-image: linear-gradient(rgb(236, 236, 198), rgb(202, 112, 27));
+    border: 2px solid rgb(194, 209, 109);
+}
+.Welcome{
+    color: rgb(15, 45, 216);
+}
 
+.logo-image{
+    width: 45px;
+    height: 35px;
+    border-radius: 10px;
+}

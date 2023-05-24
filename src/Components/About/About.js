@@ -18,12 +18,7 @@ const About = () => {
                 About Our Company
               </h2>
               <p className="my-auto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                vehicula ante a risus fringilla, quis ultricies arcu maximus.
-                Sed non est non est facilisis accumsan. Integer molestie laoreet
-                risus, nec lobortis nunc consequat vel. Sed condimentum at velit
-                vel bibendum. Phasellus eget augue euismod, pulvinar enim eget,
-                imperdiet nulla.
+                We provide first class service for our customers. We have the authetic inventory of various products. We  value the safety of your products. I am thrilled to introduce you to Dexo Mart. Our platform is designed to revolutionize your online shopping experience and provide you with a wide range of products and services at your fingertips. we understand the value of convenience and simplicity, and our user-friendly interface.
               </p>
             </div>
           </Col>
@@ -45,8 +40,7 @@ const About = () => {
           <Card.Body>
             <Card.Title className="fs-1 text-primary">01</Card.Title>
             <Card.Text className="fs-5 text-white rounded shadow">
-              This is a description of card 1. It can contain any type of
-              content. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique deserunt eius deleniti dolor, explicabo dolores quaerat perferendis accusamus delectus velit ut et minus. Rem voluptatem possimus soluta esse molestias molestiae temporibus libero dolores odio quidem, impedit error nihil perspiciatis consequatur.
+            We are excited to share with you the exceptional services offered by Dexo Mart. Our primary goal is to provide you with an unparalleled online shopping experience while prioritizing your satisfaction and convenience.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -55,8 +49,7 @@ const About = () => {
           <Card.Body>
             <Card.Title className="fs-1 text-warning">02</Card.Title>
             <Card.Text className="fs-5 text-white rounded shadow">
-              This is a description of card 1. It can contain any type of
-              content. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique deserunt eius deleniti dolor, explicabo dolores quaerat perferendis accusamus delectus velit ut et minus. Rem voluptatem possimus soluta esse molestias molestiae temporibus libero dolores odio quidem, impedit error nihil perspiciatis consequatur.
+            User-Friendly Interface: We understand the importance of a seamless browsing and shopping experience. Our website boasts an intuitive and easy-to-navigate interface, allowing you to effortlessly explore different categories, filter search results, compare products, and make informed purchase decisions. Finding the perfect item has never been easier.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -65,8 +58,7 @@ const About = () => {
           <Card.Body>
             <Card.Title className="fs-1 text-dark">03</Card.Title>
             <Card.Text className="fs-5 text-white rounded shadow">
-              This is a description of card 1. It can contain any type of
-              content. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique deserunt eius deleniti dolor, explicabo dolores quaerat perferendis accusamus delectus velit ut et minus. Rem voluptatem possimus soluta esse molestias molestiae temporibus libero dolores odio quidem, impedit error nihil perspiciatis consequatur.
+              We are providing secured delivery services with smart payment system. An online payment system facilitates secure and convenient transactions over the internet. It allows customers to make payments electronically, using various methods such as credit cards. These systems employ encryption and authentication measures to safeguard sensitive financial information, ensuring a smooth and reliable payment process. 
             </Card.Text>
           </Card.Body>
         </Card>
@@ -90,7 +82,7 @@ const About = () => {
               <h2 className="py-3 text-center text-secondary mt-4 rounded-circle">
                 We realize that you lead a busy life, so we have made it easy for you to drop off your vehicle 24/7.
               </h2>
-              <h1 className="text-center mt-5"><FcCallback className="me-4 mb-1"/>01843882834</h1>
+              <h1 className="text-center mt-5"><FcCallback className="me-4 mb-1"/>+8801732317577</h1>
             </div>
           </Col>
          

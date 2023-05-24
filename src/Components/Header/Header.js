@@ -6,16 +6,18 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import  { AuthContext } from "../../context/UserContext";
-import logo from "../../images/Logo.svg";
+import logo from "../../images/dexo-Mart.png";
 import { FaBeer } from 'react-icons/fa';
+import './Header.css'
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   console.log(user)
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
+    <Navbar className="Navbar" collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
       <Container>
-        <img src={logo} alt="" />
+        <img className="logo-image" src={logo} alt="" />
+        
         <Navbar.Brand href="#home"></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -45,7 +47,7 @@ const Header = () => {
               </>
               :
               <>
-               <FaBeer/>
+               {/* <FaBeer/> */}
               </>
             }
           </Nav>

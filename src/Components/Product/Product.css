@@ -6,6 +6,10 @@
     background-color: rgb(41, 37, 37);
     color: white;
 }
+.product:hover{
+    transition: 2s;
+    transform: scale(1.1);
+}
 .product img{
     width: 286px;
     height: 256px;

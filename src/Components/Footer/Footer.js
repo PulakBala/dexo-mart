@@ -1,25 +1,25 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import './Footer.css'
 
 const Footer = () => {
     return (
         <div>
-             <footer className="mt-5 bg-black text-white text-center">
+             <footer className=" footer-section mt-5 bg-black text-white text-center">
         <Container className="py-5">
           <Row>
             <Col md={4}>
               <h5>About Us</h5>
               <p>
-                We are a team of developers building amazing web applications.
+                Trendy Inventory, Safe Payment, Best Services.
               </p>
             </Col>
             <Col md={4}>
               <h5>Contact Us</h5>
               <p>
-                Email: info@example.com
+                Email: mahigm7.mahi@gmail.com
                 <br />
-                Phone: (555) 555-5555
+                Phone: +8801732317577
               </p>
             </Col>
             <Col md={4}>
@@ -27,19 +27,19 @@ const Footer = () => {
               <p>Stay connected on social media:</p>
               <ul className="list-inline">
                 <li className="list-inline-item">
-                  <Link>Facebook</Link>
+                  <a href='https://www.facebook.com/gmmahi698'>Facebook</a>
                 </li>
                 <li className="list-inline-item">
-                  <Link>Twitter</Link>
+                  <a href='https://twitter.com/MahiGolam'>Twitter</a>
                 </li>
                 <li className="list-inline-item">
-                  <Link>Instagram</Link>
+                  <a href='https://instagram.com/gmmahi01?igshid=NTc4MTIwNjQ2YQ=='>Instagram</a>
                 </li>
               </ul>
             </Col>
           </Row>
           <hr />
-          <p className="text-center">&copy; 2023 My Awesome App</p>
+          <p className="text-center">Developer: Golam Moula Mahi</p>
         </Container>
       </footer>
         </div>

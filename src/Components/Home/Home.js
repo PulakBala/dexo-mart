@@ -9,7 +9,6 @@ import bag from "../../images/bag.png";
 import save from "../../images/save.jpeg";
 import fashionShoe from "../../images/fashion-shoe.webp";
 
-
 import "./Home.css";
 import { Link, useLoaderData } from "react-router-dom";
 import PopulerProducts from "../PopulerProducts/PopulerProducts";
@@ -17,10 +16,9 @@ import Commnet from "../Comment/Commnet";
 import useTitle from "../../hook/useTitle";
 import Footer from "../Footer/Footer";
 
-
 const Home = () => {
   const populerProduct = useLoaderData();
-  useTitle('Home')
+  useTitle("Home");
 
   const [comments, setComments] = useState([""]);
 
@@ -73,14 +71,14 @@ const Home = () => {
 
       <div>
         <h1 className="text-center mt-5 ">
-          Welcome to<marquee> Ema-John!!</marquee>
+          Welcome to<marquee> DeXo MarT!!</marquee>
         </h1>
-        <p className="text fs-5 m-auto  py-5 mb-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-          necessitatibus quos expedita, deleniti eveniet labore assumenda
-          exercitationem officia eius culpa pariatur repellat nihil est quo
-          maiores laudantium voluptas consequuntur fugiat. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Minima, iure.
+        <p className="text-secondary  text fs-3 m-auto  py-5 mb-5">
+          We're thrilled to have you here. Explore our vast collection of
+          products, carefully curated for your needs. Enjoy a seamless shopping
+          experience, exceptional customer service, and secure transactions.
+          Start discovering and find something special that enhances your
+          lifestyle. Happy shopping!
         </p>
       </div>
 
@@ -115,23 +113,13 @@ const Home = () => {
               <img className="big1-img" src={save} alt="..." />
             </div>
             <div class="col-md-6 bg">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text fs-5 ">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer. Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Vitae eos quis maxime modi mollitia nulla beatae
-                  consequuntur aut odio voluptate magni laboriosam, ipsam iure
-                  voluptatum? Accusamus porro aut aspernatur, sapiente molestias
-                  nostrum nisi nulla impedit atque ratione cum, tempora iure?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                  rerum repudiandae commodi. Cum voluptas dignissimos minima
-                  distinctio! Cum laudantium corrupti aperiam magni illo
-                  laboriosam neque labore iure animi, assumenda pariatur magnam
-                  ipsum eveniet! Voluptatum magnam fuga esse, impedit magni amet
-                  quis perferendis dolor, eius similique facere praesentium,
-                  doloremque assumenda aspernatur.
+              <div class="card-body mt-5">
+                <h5 class="card-title mt-5 " >Card Title</h5>
+                <p class="card-text fs-5 mt-5 ">
+                  Unleash Your Shopping Potential: Discover Endless
+                  Possibilities at Dexo Mart!" "Transforming Online Shopping:
+                  Elevate Your Experience with Dexo Mart!" "Uncover a World of
+                  Shopping Delights: Explore Dexo Mart and Unleash Your Style!
                 </p>
                 <p class="card-text">
                   <small class="text-muted">Last updated 3 mins ago</small>
@@ -145,22 +133,18 @@ const Home = () => {
           <div class="row g-0">
             <div class="col-md-6">
               <div class="card-body bg">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text fs-5">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer. Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Vitae eos quis maxime modi mollitia nulla beatae
-                  consequuntur aut odio voluptate magni laboriosam, ipsam iure
-                  voluptatum? Accusamus porro aut aspernatur, sapiente molestias
-                  nostrum nisi nulla impedit atque ratione cum, tempora iure?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                  rerum repudiandae commodi. Cum voluptas dignissimos minima
-                  distinctio! Cum laudantium corrupti aperiam magni illo
-                  laboriosam neque labore iure animi, assumenda pariatur magnam
-                  ipsum eveniet! Voluptatum magnam fuga esse, impedit magni amet
-                  quis perferendis dolor, eius similique facere praesentium,
-                  doloremque assumenda asper?
+                <h5 class="card-title">Card Title</h5>
+                <p class="card-text fs-5 ">
+                  Shop Smarter, Shop Better: Experience the Best Deals and
+                  Selection at Dexo Mart!" "Unlock Your Shopping Fantasies:
+                  Step into Dexo Mart and Discover a World of
+                  Possibilities!" "Indulge in Retail Therapy: Find Your Perfect
+                  Match at Dexo Mart- Where Shopping Dreams Come True!"
+                  "Embrace the Joy of Online Shopping: Dexo Mart - Your
+                  Gateway to Exceptional Products and Services!" "Where Style
+                  Meets Convenience: Dexo Mart - Your One-Stop Destination
+                  for Fashion, Tech, Home, and More.Uncover Your Perfect Shopping Experience where Every Purchase Matters.Embrace the Future of Shopping where Innovation Meets Convenience.Your Shopping Haven Awaits: Indulge in Unparalleled Variety at <br/> <span className="text-danger">Dexo Mart</span>. <br/>
+                  Enjoy a happy shopping."
                 </p>
                 <p class="card-text">
                   <small class="text-muted">Last updated 16 mins ago</small>
@@ -168,11 +152,7 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-6">
-              <img
-                className="big1-img"
-                src={fashionShoe}
-                alt="..."
-              />
+              <img className="big1-img" src={fashionShoe} alt="..." />
             </div>
           </div>
         </div>
@@ -180,7 +160,7 @@ const Home = () => {
         {/* populer collection */}
 
         {/* <Gallery/> */}
-        
+
         <div className="gallery mt-5">
           {populerProduct.map((populer) => (
             <PopulerProducts
@@ -217,8 +197,7 @@ const Home = () => {
         </form>
       </div>
 
-    
-      <Footer/>
+      <Footer />
     </div>
   );
 };
