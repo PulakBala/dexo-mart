@@ -26,7 +26,7 @@ const Header = () => {
           <Link className="text-white" style={{ textDecoration: "none" }} to="/">Home</Link>
             <Link className="text-white" style={{ textDecoration: "none" }} to="/shop">Shop</Link>
             <Link className="text-white" style={{ textDecoration: "none" }} to="/orders">Orders</Link>
-            <Link className="text-white" style={{ textDecoration: "none" }} to="/inventory">Inventory</Link>
+            {/* <Link className="text-white" style={{ textDecoration: "none" }} to="/inventory">Inventory</Link> */}
             <Link className="text-white" style={{ textDecoration: "none" }} to="/about">About</Link>
             {user?.uid ? (
               <>

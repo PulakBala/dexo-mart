@@ -4,7 +4,7 @@ import About from './Components/About/About';
 import Main from './layouts/Main';
 import Shop from './Components/Shop/Shop'
 import Orders from './Components/Orders/Orders';
-import Inventory from './Components/Inventory/Inventory';
+// import Inventory from './Components/Inventory/Inventory';
 import { productsAndCartLoader } from './loaders/productsAndCartLoader';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
@@ -32,10 +32,10 @@ const App = () => {
           loader: productsAndCartLoader,
           element: <Orders></Orders>
         },
-        {
-          path: '/inventory',
-          element: <PrivateRoute><Inventory></Inventory></PrivateRoute>
-        },
+        // {
+        //   path: '/inventory',
+        //   element: <PrivateRoute><Inventory></Inventory></PrivateRoute>
+        // },
         {
           path: '/shipping',
           element: <PrivateRoute><Shipping></Shipping></PrivateRoute>

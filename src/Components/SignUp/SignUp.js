@@ -99,7 +99,7 @@ const SignUp = () => {
           <label htmlFor="photoURL">
             PhotoURL :
             <br/>
-            <input type="photoURL" name="photoURL" required/>
+            <input type="photoURL" name="photoURL"/>
 
             </label>
         <br/>

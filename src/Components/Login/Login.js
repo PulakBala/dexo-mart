@@ -54,7 +54,7 @@ const Login = () => {
         </form>
         <br/>
         <p>
-          New to ema john <Link to="/signup">Create a New Account</Link>
+          New to DeXo-Mart <Link to="/signup">Create a New Account</Link>
         </p>
       </div>
       <Footer />
